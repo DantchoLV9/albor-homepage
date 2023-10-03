@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 31, 41, 55;
+  --background-rgb: 255, 255, 255;
+  --gradient1-from-rgb: 88, 185, 255;
+  --gradient1-to-rgb: 0, 204, 167;
+  --gradient2-from-rgb: 255, 172, 75;
+  --gradient2-to-rgb: 255, 92, 0;
+  --gradient3-from-rgb: 255, 89, 139;
+  --gradient3-to-rgb: 137, 96, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-rgb: 31, 41, 55;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
