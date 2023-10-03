@@ -24,3 +24,10 @@ body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
 }
+
+[data-theme='dark'] {
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 31, 41, 55;
+}
+
+
