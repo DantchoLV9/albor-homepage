@@ -8,7 +8,7 @@ const NewsletterSignupForm = () => {
 			</label>
 			<div className="flex gap-2">
 				<input
-					className="border py-2 px-3 rounded-lg text-2xl"
+					className="border border-foreground/10 bg-background py-2 px-3 rounded-lg text-2xl"
 					id="newsletter_signup_form_email"
 					type="text"
 					placeholder="Email Address"
