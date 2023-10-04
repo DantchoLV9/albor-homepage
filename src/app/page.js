@@ -1,3 +1,4 @@
+import GradientBackgroundParagraph from "./components/GradientBackgroundParagraph/GradientBackgroundParagraph";
 import NewsletterSignupForm from "./components/NewsletterSignupForm/NewsletterSignupForm";
 import Section from "./components/Section/Section";
 
@@ -23,7 +24,7 @@ export default function Home() {
 				</div>
 				<NewsletterSignupForm />
 			</div>
-			<p>A picture is worth a thousand words</p>
+			<GradientBackgroundParagraph text="A picture is worth a thousand words" />
 			<Section
 				pillText="Explore"
 				fromColor="from-gradient1-from"
