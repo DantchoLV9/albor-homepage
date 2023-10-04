@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
 		<html lang="en">
 			<body className={`${nunitoSans.className} min-h-screen flex flex-col`}>
 				<ThemeProvider>
-					<Navbar />
+					<Navbar effect="blur" />
 					{children}
 					<Footer />
 				</ThemeProvider>
