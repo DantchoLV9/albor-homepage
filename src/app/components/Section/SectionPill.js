@@ -1,6 +1,6 @@
 import React from "react";
 
-const SectionPill = ({ text, fromColor, toColor }) => {
+const SectionPill = ({ text, fromColor, toColor, midColor }) => {
 	return (
 		<div
 			className={`
@@ -10,15 +10,15 @@ const SectionPill = ({ text, fromColor, toColor }) => {
             rounded-full 
             relative
             mt-60
-            ${fromColor} 
-            ${toColor} 
+            from-${fromColor} 
+            to-${toColor} 
             before:content-[""] 
             before:absolute
             before:h-40 
             before:w-0.5 
             before:bg-gradient-to-b 
             before:from-transparent 
-            before:to-mid1
+            before:to-${midColor}
             before:top-0
             before:left-1/2
             before:transform 

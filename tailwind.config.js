@@ -15,8 +15,10 @@ module.exports = {
 				mid1: "color-mix(in srgb, rgb(var(--gradient1-from-rgb)), rgb(var(--gradient1-to-rgb)))",
 				"gradient2-from": "rgb(var(--gradient2-from-rgb))",
 				"gradient2-to": "rgb(var(--gradient2-to-rgb))",
+				mid2: "color-mix(in srgb, rgb(var(--gradient2-from-rgb)), rgb(var(--gradient2-to-rgb)))",
 				"gradient3-from": "rgb(var(--gradient3-from-rgb))",
 				"gradient3-to": "rgb(var(--gradient3-to-rgb))",
+				mid3: "color-mix(in srgb, rgb(var(--gradient3-from-rgb)), rgb(var(--gradient3-to-rgb)))",
 			},
 			backgroundImage: {
 				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

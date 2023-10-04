@@ -1,6 +1,11 @@
+import Image from "next/image";
 import GradientBackgroundParagraph from "./components/GradientBackgroundParagraph/GradientBackgroundParagraph";
 import NewsletterSignupForm from "./components/NewsletterSignupForm/NewsletterSignupForm";
 import Section from "./components/Section/Section";
+import imageOne from "./images/image1.jpg";
+import imageTwo from "./images/image2.jpg";
+import imageFour from "./images/image4.jpg";
+import imageFive from "./images/image5.jpg";
 
 export default function Home() {
 	return (
@@ -27,11 +32,35 @@ export default function Home() {
 			<GradientBackgroundParagraph text="A picture is worth a thousand words" />
 			<Section
 				pillText="Explore"
-				fromColor="from-gradient1-from"
-				toColor="to-gradient1-to"
+				fromColor="gradient1-from"
+				toColor="gradient1-to"
+				midColor="mid1"
 				title="Get inspired"
 				description="Dive into a world of creativity and inspiration. Explore the incredible artwork images and photos crafted by our talented community."
-			></Section>
+			>
+				<div className="grid h-[48rem] grid-cols-12 grid-rows-2 w-full gap-5 relative after:content-[''] after:w-full after:h-full after:absolute after:top-0 after:left-0 after:bg-gradient-to-t after:from-background/95 after:z-10">
+					<Image
+						alt="photo of a gravel path between some trees"
+						className="w-full h-full col-start-1 col-span-4 row-span-1 object-cover"
+						src={imageOne}
+					/>
+					<Image
+						alt="photo of train tracks running up to a station next to some buildings"
+						className="w-full h-full col-start-5 col-span-4 row-span-1 object-cover"
+						src={imageTwo}
+					/>
+					<Image
+						alt="photo of a highway taken from above showing the headlight and brakelight lighttrails left from cars"
+						className="w-full h-full row-start-2 col-span-8 row-span-1 object-cover object-top"
+						src={imageFive}
+					/>
+					<Image
+						alt="photo of a telephone boot net to a red post box"
+						className="w-full h-full col-start-9 col-span-4 row-span-full object-cover"
+						src={imageFour}
+					/>
+				</div>
+			</Section>
 		</main>
 	);
 }
