@@ -34,7 +34,7 @@ export default function Home() {
 				pillText="Explore"
 				fromColor="gradient1-from"
 				toColor="gradient1-to"
-				midColor="mid1"
+				midColor="gradient1-mid"
 				title="Get inspired"
 				description="Dive into a world of creativity and inspiration. Explore the incredible artwork images and photos crafted by our talented community."
 			>
@@ -61,6 +61,14 @@ export default function Home() {
 					/>
 				</div>
 			</Section>
+			<Section
+				pillText="Express"
+				fromColor="gradient2-from"
+				toColor="gradient2-to"
+				midColor="gradient2-mid"
+				title="Share your art"
+				description="Share your unique artwork images and photos with our community. Start inspiring others and showcase your talent to the world."
+			></Section>
 		</main>
 	);
 }
