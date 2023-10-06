@@ -1,16 +1,46 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import React from "react";
+import { motion, useAnimate } from "framer-motion";
+import useRandomInterval from "@/app/utils/useRandomInterval";
 
 const ShowcaseSVG = ({ className }) => {
-	const finalLinePulse = useRef();
-	useEffect(() => {
-		console.log(finalLinePulse.current.getTotalLength());
-	}, [finalLinePulse]);
-
+	const [scope, animate] = useAnimate();
+	const finalDelay = [6000, 12000];
+	const versionsDelay = [3000, 6000];
+	const editsDelay = [4500, 9000];
+	const rawDelay = [9000, 18000];
+	useRandomInterval(() => {
+		animate(
+			"#final-pulse-path",
+			{ strokeDashoffset: [null, 50, -430] },
+			{ duration: 6, times: [0, 1, 1] }
+		);
+	}, ...finalDelay);
+	useRandomInterval(() => {
+		animate(
+			"#versions-pulse-path",
+			{ strokeDashoffset: [null, -230, 50] },
+			{ duration: 3, times: [0, 1, 1] }
+		);
+	}, ...versionsDelay);
+	useRandomInterval(() => {
+		animate(
+			"#edits-pulse-path",
+			{ strokeDashoffset: [null, -341, 50] },
+			{ duration: 4.5, times: [0, 1, 1] }
+		);
+	}, ...editsDelay);
+	useRandomInterval(() => {
+		animate(
+			"#raw-pulse-path",
+			{ strokeDashoffset: [null, 760, 50] },
+			{ duration: 9, times: [0, 1, 1] }
+		);
+	}, ...rawDelay);
 	return (
 		<svg
+			ref={scope}
 			width="882"
 			height="383"
 			viewBox="0 0 882 383"
@@ -30,22 +60,11 @@ const ShowcaseSVG = ({ className }) => {
 			/>
 			{/* 427.0736999511719 */}
 			<motion.path
+				id="final-pulse-path"
 				strokeDasharray="50px, 430px"
 				strokeDashoffset="-430"
-				animate={{
-					strokeDashoffset: 1,
-					strokeDasharray: "0px, 430px",
-					stroke: "red",
-				}}
-				transition={{
-					duration: 3,
-					strokeDasharray: {
-						delay: 2.9,
-						duration: 1,
-					},
-				}}
 				d="M555 99H747C766.33 99 782 114.67 782 134V314.088"
-				stroke="#CFCFCF"
+				stroke="red"
 				strokeWidth="3"
 				strokeLinecap="round"
 			/>
@@ -62,22 +81,11 @@ const ShowcaseSVG = ({ className }) => {
 			/>
 			{/* 228.4713897705078 */}
 			<motion.path
+				id="versions-pulse-path"
 				strokeDasharray="50px, 230px"
 				strokeDashoffset="50"
-				animate={{
-					strokeDashoffset: -229,
-					strokeDasharray: "0px, 230px",
-					stroke: "green",
-				}}
-				transition={{
-					duration: 3,
-					strokeDasharray: {
-						delay: 2.9,
-						duration: 1,
-					},
-				}}
 				d="M555 301.5V259C555 239.67 539.33 224 520 224H484C464.67 224 449 208.33 449 189V149"
-				stroke="red"
+				stroke="green"
 				strokeWidth="3"
 				strokeLinecap="round"
 			/>
@@ -94,20 +102,9 @@ const ShowcaseSVG = ({ className }) => {
 			/>
 			{/* 340.9570617675781 */}
 			<motion.path
+				id="edits-pulse-path"
 				strokeDasharray="50px, 341px"
 				strokeDashoffset="50"
-				animate={{
-					strokeDashoffset: -341,
-					strokeDasharray: "0px, 342px",
-					stroke: "blue",
-				}}
-				transition={{
-					duration: 3,
-					strokeDasharray: {
-						delay: 2.9,
-						duration: 1,
-					},
-				}}
 				d="M327 301V260.5C327 241.17 311.33 225.5 292 225.5H270C250.67 225.5 235 209.83 235 190.5V134C235 114.67 250.67 99 270 99H327"
 				stroke="blue"
 				strokeWidth="3"
@@ -126,21 +123,9 @@ const ShowcaseSVG = ({ className }) => {
 			/>
 			{/* 657.46923828125 */}
 			<motion.path
-				ref={finalLinePulse}
+				id="raw-pulse-path"
 				strokeDasharray="50px, 660px"
 				strokeDashoffset="50"
-				animate={{
-					strokeDashoffset: 710,
-					strokeDasharray: "0px, 690px",
-					stroke: "red",
-				}}
-				transition={{
-					duration: 2.9,
-					strokeDasharray: {
-						delay: 3,
-						duration: 1,
-					},
-				}}
 				d="M449 44V37C449 17.67 433.33 2 414 2H137.502C118.172 2 102.502 17.67 102.502 37V301"
 				stroke="red"
 				strokeWidth="3"
