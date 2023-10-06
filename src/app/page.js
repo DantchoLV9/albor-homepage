@@ -105,8 +105,12 @@ export default function Home() {
 					{/* Showcase */}
 					<FeatureCard className="col-start-1 col-span-8 row-start-2 row-span-2">
 						<div className="flex justify-around items-center h-full flex-col gap-5">
-							<ShowcaseSVG />
-							<p className="text-center text-3xl">Showcase the unique process involved in creating your artwork!</p>
+							<div className="w-full flex justify-center items-center">
+								<ShowcaseSVG />
+							</div>
+							<p className="text-center text-3xl">
+								Showcase the unique process involved in creating your artwork!
+							</p>
 						</div>
 					</FeatureCard>
 					{/* Video */}
