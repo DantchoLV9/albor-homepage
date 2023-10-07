@@ -64,7 +64,7 @@ const ShowcaseSVG = () => {
 				strokeDasharray="50px, 430px"
 				strokeDashoffset="-430"
 				d="M555 99H747C766.33 99 782 114.67 782 134V314.088"
-				className="stroke-foreground"
+				className="stroke-gradient1-mid"
 				strokeWidth="3"
 				strokeLinecap="round"
 			/>
@@ -85,7 +85,7 @@ const ShowcaseSVG = () => {
 				strokeDasharray="50px, 230px"
 				strokeDashoffset="50"
 				d="M555 301.5V259C555 239.67 539.33 224 520 224H484C464.67 224 449 208.33 449 189V149"
-				className="stroke-foreground"
+				className="stroke-gradient2-mid"
 				strokeWidth="3"
 				strokeLinecap="round"
 			/>
@@ -106,7 +106,7 @@ const ShowcaseSVG = () => {
 				strokeDasharray="50px, 341px"
 				strokeDashoffset="50"
 				d="M327 301V260.5C327 241.17 311.33 225.5 292 225.5H270C250.67 225.5 235 209.83 235 190.5V134C235 114.67 250.67 99 270 99H327"
-				className="stroke-foreground"
+				className="stroke-gradient3-mid"
 				strokeWidth="3"
 				strokeLinecap="round"
 			/>

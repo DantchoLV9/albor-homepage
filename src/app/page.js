@@ -11,6 +11,10 @@ import imageSix from "./images/image6.webp";
 import FeatureCard from "./components/FeatureCard/FeatureCard";
 import ShowcaseSVG from "./components/FeatureCard/ShowcaseSVG";
 import HeroTitle from "./components/HeroTitle/HeroTitle";
+import CheckIcon from "./components/EarnStep/CheckIcon";
+import PlusIcon from "./components/EarnStep/PlusIcon";
+import DollarIcon from "./components/EarnStep/DollarIcon";
+import EarnStep from "./components/EarnStep/EarnStep";
 
 export default function Home() {
 	return (
@@ -77,13 +81,11 @@ export default function Home() {
 								Any
 							</h3>
 							<div className="w-full bg-foreground/10 rounded-2xl py-3 px-5 text-3xl">
-								<div>
-									<p className="text-center">Resolution</p>
-									<p className="text-center">Aspect Ratio</p>
-									<p className="text-center">File Type</p>
-									<p className="text-center">Topic</p>
-									<p className="text-center">Resolution</p>
-								</div>
+								<p className="text-center">Resolution</p>
+								{/* <p className="text-center">Aspect Ratio</p>
+								<p className="text-center">File Type</p>
+								<p className="text-center">Topic</p>
+								<p className="text-center">Resolution</p> */}
 							</div>
 						</div>
 					</FeatureCard>
@@ -182,7 +184,43 @@ export default function Home() {
 				midColor="gradient3-mid"
 				title="Get rewarded"
 				description="Unlock your creative potential and reap the rewards! Your creativity could be your ticket to exciting opportunities."
-			></Section>
+			>
+				<div className="grid grid-cols-11 grid-rows-3 w-3/4">
+					<div className="w-full h-full flex justify-center items-center col-start-7 col-span-5">
+						<EarnStep
+							title="Get started"
+							description="Starting is quick and easy. Just fill out some required information in order to setup your store and you're done."
+						/>
+					</div>
+					<div className="w-full h-full flex justify-center items-center col-start-1 col-span-5 row-start-2 row-span-1">
+						<EarnStep
+							title="Submit your art"
+							description="Tell us more about the art pieces you would like to sell."
+						/>
+					</div>
+					<div className="w-full h-full flex justify-center items-center col-start-7 col-span-5 row-start-3 row-span-1">
+						<EarnStep
+							title="Start earning"
+							description="You're all set, now just remember to stay active, engage with out community and be patient."
+						/>
+					</div>
+					<div className="flex flex-col justify-center items-center col-start-6 col-span-1 row-start-1 row-span-3">
+						<div className="w-0.5 h-40 bg-gradient-to-t from-foreground/20"></div>
+						<div className="w-12 h-12 text-gradient1-mid">
+							<CheckIcon />
+						</div>
+						<div className="h-64 border border-foreground/20 border-dashed background "></div>
+						<div className="w-12 h-12 text-gradient2-mid">
+							<PlusIcon />
+						</div>
+						<div className="h-64 border border-foreground/20 border-dashed background "></div>
+						<div className="w-12 h-12 text-gradient3-mid">
+							<DollarIcon />
+						</div>
+						<div className="w-0.5 h-40 bg-gradient-to-b from-foreground/20"></div>
+					</div>
+				</div>
+			</Section>
 			<div className="mt-32 mb-24">
 				<NewsletterSignupForm htmlForId="footer_newsletter_signup_form" />
 			</div>
