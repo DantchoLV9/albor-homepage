@@ -8,7 +8,7 @@ import {
 	useSpring,
 } from "framer-motion";
 
-const GradientBackgroundParagraph = ({ text }) => {
+const GradientBackgroundParagraph = ({ text, className }) => {
 	const mouseX = useMotionValue(50);
 	const mouseY = useMotionValue(50);
 	const mouseXSpring = useSpring(mouseX);
@@ -36,7 +36,7 @@ const GradientBackgroundParagraph = ({ text }) => {
 				backgroundImage: spotlightBackground,
 				backgroundClip: "text",
 			}}
-			className="text-2xl bg-clip-text text-transparent cursor-default"
+			className={`bg-clip-text text-transparent cursor-default ${className}`}
 		>
 			{text}
 		</motion.p>

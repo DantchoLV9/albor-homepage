@@ -33,7 +33,10 @@ export default function Home() {
 				</div>
 				<NewsletterSignupForm />
 			</div>
-			<GradientBackgroundParagraph text="A picture is worth a thousand words" />
+			<GradientBackgroundParagraph
+				className="text-2xl"
+				text="A picture is worth a thousand words"
+			/>
 			<Section
 				pillText="Explore"
 				fromColor="gradient1-from"
