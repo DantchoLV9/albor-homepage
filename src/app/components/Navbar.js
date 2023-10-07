@@ -22,7 +22,7 @@ const Navbar = ({ effect = "blur" }) => {
 			} ${effect === "grain" && "backdrop-blur"}`}
 		>
 			<div className="w-3/4">
-				<Link href="/">
+				<Link href="/" aria-label="go back to the home page">
 					<Logo className="h-10" variant="full" />
 				</Link>
 			</div>

@@ -30,6 +30,7 @@ const ThemeSelector = () => {
 	return (
 		<div className="flex justify-center items-center gap-2">
 			<button
+				aria-label="select system default theme"
 				className={`
 				p-2 rounded-full
 				${theme === "system" ? "bg-foreground/10" : ""}
@@ -39,6 +40,7 @@ const ThemeSelector = () => {
 				<SystemIcon className="h-6" />
 			</button>
 			<button
+				aria-label="select light theme"
 				className={`
 				p-2 rounded-full
 				${theme === "light" ? "bg-foreground/10" : ""}
@@ -48,6 +50,7 @@ const ThemeSelector = () => {
 				<SunIcon className="h-6" />
 			</button>
 			<button
+				aria-label="select dark theme"
 				className={`
 				p-2 rounded-full
 				${theme === "dark" ? "bg-foreground/10" : ""}

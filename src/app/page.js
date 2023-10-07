@@ -2,12 +2,12 @@ import Image from "next/image";
 import GradientBackgroundParagraph from "./components/GradientBackgroundParagraph/GradientBackgroundParagraph";
 import NewsletterSignupForm from "./components/NewsletterSignupForm/NewsletterSignupForm";
 import Section from "./components/Section/Section";
-import imageOne from "./images/image1.jpg";
-import imageTwo from "./images/image2.jpg";
-import imageThree from "./images/image3.jpg";
-import imageFour from "./images/image4.jpg";
-import imageFive from "./images/image5.jpg";
-import imageSix from "./images/image6.jpg";
+import imageOne from "./images/image1.webp";
+import imageTwo from "./images/image2.webp";
+import imageThree from "./images/image3.webp";
+import imageFour from "./images/image4.webp";
+import imageFive from "./images/image5.webp";
+import imageSix from "./images/image6.webp";
 import FeatureCard from "./components/FeatureCard/FeatureCard";
 import ShowcaseSVG from "./components/FeatureCard/ShowcaseSVG";
 import HeroTitle from "./components/HeroTitle/HeroTitle";
@@ -22,7 +22,7 @@ export default function Home() {
 						The online canvas where pixels and passions colide.
 					</p>
 				</div>
-				<NewsletterSignupForm />
+				<NewsletterSignupForm htmlForId="hero_newsletter_signup_form" />
 			</div>
 			<GradientBackgroundParagraph
 				className="text-2xl"
@@ -77,7 +77,13 @@ export default function Home() {
 								Any
 							</h3>
 							<div className="w-full bg-foreground/10 rounded-2xl py-3 px-5 text-3xl">
-								<p className="text-center">Resolution</p>
+								<div>
+									<p className="text-center">Resolution</p>
+									<p className="text-center">Aspect Ratio</p>
+									<p className="text-center">File Type</p>
+									<p className="text-center">Topic</p>
+									<p className="text-center">Resolution</p>
+								</div>
 							</div>
 						</div>
 					</FeatureCard>
@@ -178,7 +184,7 @@ export default function Home() {
 				description="Unlock your creative potential and reap the rewards! Your creativity could be your ticket to exciting opportunities."
 			></Section>
 			<div className="mt-32 mb-24">
-				<NewsletterSignupForm />
+				<NewsletterSignupForm htmlForId="footer_newsletter_signup_form" />
 			</div>
 		</main>
 	);
