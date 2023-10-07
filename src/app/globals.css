@@ -13,6 +13,10 @@
   --gradient3-to-rgb: 137, 96, 255;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));

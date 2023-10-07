@@ -2,6 +2,7 @@ import React from "react";
 import SectionPill from "./SectionPill";
 
 const Section = ({
+	id,
 	children,
 	pillText,
 	fromColor,
@@ -11,7 +12,7 @@ const Section = ({
 	description,
 }) => {
 	return (
-		<div className="flex flex-col justify-center items-center">
+		<div id={id} className="flex flex-col justify-center items-center">
 			<div className="flex flex-col justify-center items-center w-1/2 gap-10">
 				<SectionPill
 					text={pillText}

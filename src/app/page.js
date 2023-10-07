@@ -10,23 +10,14 @@ import imageFive from "./images/image5.jpg";
 import imageSix from "./images/image6.jpg";
 import FeatureCard from "./components/FeatureCard/FeatureCard";
 import ShowcaseSVG from "./components/FeatureCard/ShowcaseSVG";
+import HeroTitle from "./components/HeroTitle/HeroTitle";
 
 export default function Home() {
 	return (
 		<main className="w-full flex-1 flex flex-col justify-center items-center">
 			<div className="flex h-screen flex-col justify-center items-center gap-40 w-3/4">
 				<div className="flex flex-col gap-10 w-full">
-					<h1 className="text-9xl font-black flex gap-4 justify-center">
-						<span className="bg-gradient-to-r from-gradient1-from to-gradient1-to bg-clip-text text-transparent">
-							Explore
-						</span>
-						<span className="bg-gradient-to-r from-gradient2-from to-gradient2-to bg-clip-text text-transparent">
-							Express
-						</span>
-						<span className="bg-gradient-to-r from-gradient3-from to-gradient3-to bg-clip-text text-transparent">
-							Earn
-						</span>
-					</h1>
+					<HeroTitle />
 					<p className="text-center text-4xl">
 						The online canvas where pixels and passions colide.
 					</p>
@@ -38,6 +29,7 @@ export default function Home() {
 				text="A picture is worth a thousand words"
 			/>
 			<Section
+				id="exploreSection"
 				pillText="Explore"
 				fromColor="gradient1-from"
 				toColor="gradient1-to"
@@ -69,6 +61,7 @@ export default function Home() {
 				</div>
 			</Section>
 			<Section
+				id="expressSection"
 				pillText="Express"
 				fromColor="gradient2-from"
 				toColor="gradient2-to"
@@ -78,7 +71,7 @@ export default function Home() {
 			>
 				<div className="grid grid-cols-12 grid-rows-4 w-4/5 gap-5 relative">
 					{/* Resolution */}
-					<FeatureCard className="col-start-1 col-span-4">
+					<FeatureCard hoverEffect={true} className="col-start-1 col-span-4">
 						<div className="flex justify-around items-center h-full flex-col gap-5">
 							<h3 className="text-6xl text-center uppercase font-semibold">
 								Any
@@ -90,7 +83,7 @@ export default function Home() {
 					</FeatureCard>
 					{/* Gear */}
 					<FeatureCard className="col-start-5 col-span-8">
-						<div className="flex justify-around items-center h-full flex-col justify-center items-center gap-5">
+						<div className="flex justify-around items-center h-full flex-col gap-5">
 							<Image
 								className="absolute top-0 left-0 w-full h-full object-cover -z-10"
 								alt=""
@@ -106,7 +99,10 @@ export default function Home() {
 						</div>
 					</FeatureCard>
 					{/* Showcase */}
-					<FeatureCard className="col-start-1 col-span-8 row-start-2 row-span-2">
+					<FeatureCard
+						hoverEffect={true}
+						className="col-start-1 col-span-8 row-start-2 row-span-2"
+					>
 						<div className="flex justify-around items-center h-full flex-col gap-5">
 							<div className="w-full flex justify-center items-center">
 								<ShowcaseSVG />
@@ -117,7 +113,10 @@ export default function Home() {
 						</div>
 					</FeatureCard>
 					{/* Video */}
-					<FeatureCard className="col-start-9 col-span-4 row-start-2 row-span-2">
+					<FeatureCard
+						hoverEffect={true}
+						className="col-start-9 col-span-4 row-start-2 row-span-2"
+					>
 						<div className="flex justify-around items-center h-full flex-col gap-5">
 							<div className="rounded-2xl overflow-hidden relative">
 								<div className="w-14 h-14 bg-background/70 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full">
@@ -136,7 +135,10 @@ export default function Home() {
 						</div>
 					</FeatureCard>
 					{/* High res */}
-					<FeatureCard className="col-start-1 col-span-6 row-start-4">
+					<FeatureCard
+						hoverEffect={true}
+						className="col-start-1 col-span-6 row-start-4"
+					>
 						<div className="flex justify-around items-center h-full flex-col gap-5">
 							<div className="bg-gradient-to-br from-gradient3-from to-gradient3-to w-full rounded-2xl py-3">
 								<h3 className="text-6xl text-center uppercase font-semibold text-background">
@@ -150,7 +152,10 @@ export default function Home() {
 						</div>
 					</FeatureCard>
 					{/* Library */}
-					<FeatureCard className="col-start-7 col-span-6 row-start-4">
+					<FeatureCard
+						hoverEffect={true}
+						className="col-start-7 col-span-6 row-start-4"
+					>
 						<div className="flex justify-around items-center h-full flex-col gap-5">
 							<h3 className="text-6xl text-center uppercase font-semibold">
 								Library
@@ -163,6 +168,18 @@ export default function Home() {
 					</FeatureCard>
 				</div>
 			</Section>
+			<Section
+				id="earnSection"
+				pillText="Earn"
+				fromColor="gradient3-from"
+				toColor="gradient3-to"
+				midColor="gradient3-mid"
+				title="Get rewarded"
+				description="Unlock your creative potential and reap the rewards! Your creativity could be your ticket to exciting opportunities."
+			></Section>
+			<div className="mt-32 mb-24">
+				<NewsletterSignupForm />
+			</div>
 		</main>
 	);
 }

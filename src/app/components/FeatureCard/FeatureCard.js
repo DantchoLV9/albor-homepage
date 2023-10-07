@@ -1,10 +1,39 @@
-import React from "react";
+"use client";
 
-const FeatureCard = ({ children, className }) => {
+import React from "react";
+import {
+	motion,
+	useMotionTemplate,
+	useMotionValue,
+	useSpring,
+} from "framer-motion";
+
+// Set hoverEffect to true for spotlight effect on card
+const FeatureCard = ({ children, className, hoverEffect = false }) => {
+	const mouseX = useMotionValue(50);
+	const mouseY = useMotionValue(50);
+
+	const handleMouseMove = ({ clientX, clientY, currentTarget }) => {
+		if (!hoverEffect) return;
+		const { left, top, width, height } = currentTarget.getBoundingClientRect();
+
+		mouseX.set(((clientX - left) / width) * 100);
+		mouseY.set(((clientY - top) / height) * 100);
+	};
+
+	const spotlightBackground = useMotionTemplate`radial-gradient(circle at ${mouseX}% ${mouseY}%, rgba(var(--foreground-rgb), 0.03), transparent 75%)`;
+
 	return (
 		<div
-			className={`p-10 border border-foreground/10 rounded-3xl shadow-lg relative overflow-hidden ${className}`}
+			onMouseMove={handleMouseMove}
+			className={`p-10 border group border-foreground/10 rounded-3xl shadow-lg relative overflow-hidden ${className}`}
 		>
+			{hoverEffect && (
+				<motion.div
+					className="absolute top-0 left-0 pointer-events-none w-full h-full opacity-0 group-hover:opacity-100 transition-opacity"
+					style={{ backgroundImage: spotlightBackground }}
+				/>
+			)}
 			{children}
 		</div>
 	);
