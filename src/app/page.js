@@ -69,7 +69,7 @@ export default function Home() {
 				title="Share your art"
 				description="Share your unique artwork images and photos with our community. Start inspiring others and showcase your talent to the world."
 			>
-				<div className="grid grid-cols-12 grid-rows-4 w-4/5 gap-5 relative">
+				<div className="grid grid-cols-12 grid-rows-4 w-3/4 gap-5 relative">
 					{/* Resolution */}
 					<FeatureCard hoverEffect={true} className="col-start-1 col-span-4">
 						<div className="flex justify-around items-center h-full flex-col gap-5">
