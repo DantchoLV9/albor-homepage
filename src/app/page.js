@@ -15,6 +15,7 @@ import CheckIcon from "./components/EarnStep/CheckIcon";
 import PlusIcon from "./components/EarnStep/PlusIcon";
 import DollarIcon from "./components/EarnStep/DollarIcon";
 import EarnStep from "./components/EarnStep/EarnStep";
+import AnyTopic from "./components/FeatureCard/AnyTopic";
 
 export default function Home() {
 	return (
@@ -80,13 +81,7 @@ export default function Home() {
 							<h3 className="text-6xl text-center uppercase font-semibold">
 								Any
 							</h3>
-							<div className="w-full bg-foreground/10 rounded-2xl py-3 px-5 text-3xl">
-								<p className="text-center">Resolution</p>
-								{/* <p className="text-center">Aspect Ratio</p>
-								<p className="text-center">File Type</p>
-								<p className="text-center">Topic</p>
-								<p className="text-center">Resolution</p> */}
-							</div>
+							<AnyTopic />
 						</div>
 					</FeatureCard>
 					{/* Gear */}
@@ -148,7 +143,7 @@ export default function Home() {
 						className="col-start-1 col-span-6 row-start-4"
 					>
 						<div className="flex justify-around items-center h-full flex-col gap-5">
-							<div className="bg-gradient-to-br from-gradient3-from to-gradient3-to w-full rounded-2xl py-3">
+							<div className="bg-gradient-to-b from-gradient2-from to-gradient2-mid w-full rounded-2xl py-3">
 								<h3 className="text-6xl text-center uppercase font-semibold text-background">
 									High res
 								</h3>
