@@ -7,7 +7,7 @@ import ThemeProvider from "./components/ThemeProvider";
 const nunitoSans = Nunito_Sans({ subsets: ["latin"] });
 
 export const metadata = {
-	title: "Homepage | Albor",
+	title: "Home | Albor",
 	description: "The online canvas where pixels and passions colide.",
 };
 
