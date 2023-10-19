@@ -122,9 +122,9 @@ export default function Home() {
 					>
 						<div className="flex justify-around items-center h-full flex-col gap-5">
 							<div className="rounded-2xl overflow-hidden relative">
-								<div className="w-14 h-14 bg-background/70 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full">
+								{/* <div className="w-14 h-14 bg-background/70 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full">
 									<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent border-l-[15px] border-l-foreground/30"></div>
-								</div>
+								</div> */}
 								<Image
 									alt="photo of a an old car parked on the side of a street"
 									src={imageThree}
