@@ -32,7 +32,7 @@ const AnyTopic = () => {
 	}, []);
 	return (
 		<div
-			className="w-full bg-foreground/10 rounded-2xl overflow-hidden px-5 text-3xl"
+			className="w-full bg-foreground/10 rounded-2xl overflow-hidden px-5 text-xl lg:text-3xl leading-9"
 			ref={scope}
 		>
 			<div

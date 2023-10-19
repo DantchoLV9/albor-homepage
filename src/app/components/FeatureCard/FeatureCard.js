@@ -1,12 +1,7 @@
 "use client";
 
 import React from "react";
-import {
-	motion,
-	useMotionTemplate,
-	useMotionValue,
-	useSpring,
-} from "framer-motion";
+import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 
 // Set hoverEffect to true for spotlight effect on card
 const FeatureCard = ({ children, className, hoverEffect = false }) => {
@@ -26,7 +21,7 @@ const FeatureCard = ({ children, className, hoverEffect = false }) => {
 	return (
 		<div
 			onMouseMove={handleMouseMove}
-			className={`p-10 border group border-foreground/10 rounded-3xl shadow-lg relative overflow-hidden ${className}`}
+			className={`p-5 xl:p-10 border-y md:border group border-foreground/10 md:rounded-3xl md:shadow-lg relative overflow-hidden ${className}`}
 		>
 			{hoverEffect && (
 				<motion.div

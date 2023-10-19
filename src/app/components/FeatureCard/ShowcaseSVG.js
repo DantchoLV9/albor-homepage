@@ -4,7 +4,7 @@ import React from "react";
 import { motion, useAnimate } from "framer-motion";
 import useRandomInterval from "@/app/utils/useRandomInterval";
 
-const ShowcaseSVG = () => {
+const ShowcaseSVG = ({ className }) => {
 	const [scope, animate] = useAnimate();
 	const finalDelay = [6000, 12000];
 	const versionsDelay = [3000, 6000];
@@ -40,6 +40,7 @@ const ShowcaseSVG = () => {
 	}, ...rawDelay);
 	return (
 		<svg
+			className={className}
 			ref={scope}
 			width="882"
 			height="383"

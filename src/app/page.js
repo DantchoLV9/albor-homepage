@@ -20,17 +20,17 @@ import AnyTopic from "./components/FeatureCard/AnyTopic";
 export default function Home() {
 	return (
 		<main className="w-full flex-1 flex flex-col justify-center items-center">
-			<div className="flex h-screen flex-col justify-center items-center gap-40 w-3/4">
+			<div className="flex h-screen flex-col justify-center items-center gap-20 lg:gap-40 w-full lg:w-3/4 px-10">
 				<div className="flex flex-col gap-10 w-full">
 					<HeroTitle />
-					<p className="text-center text-4xl">
+					<p className="text-center text-2xl sm:text-3xl 2xl:text-4xl">
 						The online canvas where pixels and passions colide.
 					</p>
 				</div>
 				<NewsletterSignupForm htmlForId="hero_newsletter_signup_form" />
 			</div>
 			<GradientBackgroundParagraph
-				className="text-2xl"
+				className="lg:text-2xl text-center"
 				text="A picture is worth a thousand words"
 			/>
 			<Section
@@ -42,7 +42,7 @@ export default function Home() {
 				title="Get inspired"
 				description="Dive into a world of creativity and inspiration. Explore the incredible artwork images and photos crafted by our talented community."
 			>
-				<div className="grid h-[48rem] grid-cols-12 grid-rows-2 w-full gap-5 relative after:content-[''] after:w-full after:h-full after:absolute after:top-0 after:left-0 after:bg-gradient-to-t after:from-background/95 after:z-10">
+				<div className="flex flex-col md:grid md:h-[48rem] grid-cols-12 grid-rows-2 w-full md:gap-5 relative after:content-[''] after:w-full after:h-full after:absolute after:top-0 after:left-0 after:bg-gradient-to-t after:from-background/95 after:z-10">
 					<Image
 						alt="photo of a gravel path between some trees"
 						className="w-full h-full col-start-1 col-span-4 row-span-1 object-cover"
@@ -74,11 +74,11 @@ export default function Home() {
 				title="Share your art"
 				description="Share your unique artwork images and photos with our community. Start inspiring others and showcase your talent to the world."
 			>
-				<div className="grid grid-cols-12 grid-rows-4 w-3/4 gap-5 relative">
+				<div className="flex flex-col md:grid grid-cols-12 grid-rows-4 md:px-10 2xl:p-0 2xl:w-3/4 gap-5 relative">
 					{/* Resolution */}
 					<FeatureCard hoverEffect={true} className="col-start-1 col-span-4">
 						<div className="flex justify-around items-center h-full flex-col gap-5">
-							<h3 className="text-6xl text-center uppercase font-semibold">
+							<h3 className="text-4xl lg:text-5xl xl:text-6xl text-center uppercase font-semibold">
 								Any
 							</h3>
 							<AnyTopic />
@@ -92,10 +92,10 @@ export default function Home() {
 								alt=""
 								src={imageSix}
 							/>
-							<h3 className="text-6xl text-center uppercase font-semibold text-white">
+							<h3 className="text-4xl lg:text-5xl xl:text-6xl text-center uppercase font-semibold text-white">
 								Show off your gear
 							</h3>
-							<p className="text-center text-3xl w-3/4 text-white">
+							<p className="text-center text-xl lg:text-3xl w-3/4 text-white">
 								Got a rare piece of kit or an interesting collection? Show it
 								off on your gear page!
 							</p>
@@ -108,9 +108,9 @@ export default function Home() {
 					>
 						<div className="flex justify-around items-center h-full flex-col gap-5">
 							<div className="w-full flex justify-center items-center">
-								<ShowcaseSVG />
+								<ShowcaseSVG className="w-full h-full" />
 							</div>
-							<p className="text-center text-3xl">
+							<p className="text-center text-xl lg:text-3xl">
 								Showcase the unique process involved in creating your artwork!
 							</p>
 						</div>
@@ -130,8 +130,10 @@ export default function Home() {
 									src={imageThree}
 								/>
 							</div>
-							<h3 className="text-5xl text-center font-semibold">Video</h3>
-							<p className="text-center  text-3xl">
+							<h3 className="text-3xl lg:text-4xl xl:text-5xl text-center font-semibold">
+								Video
+							</h3>
+							<p className="text-center text-xl lg:text-3xl">
 								Share your video masterpieces with the world and let your
 								creativity shine!
 							</p>
@@ -143,12 +145,12 @@ export default function Home() {
 						className="col-start-1 col-span-6 row-start-4"
 					>
 						<div className="flex justify-around items-center h-full flex-col gap-5">
-							<div className="bg-gradient-to-b from-gradient2-from to-gradient2-mid w-full rounded-2xl py-3">
-								<h3 className="text-6xl text-center uppercase font-semibold text-background">
+							<div className="bg-gradient-to-b from-gradient2-from to-gradient2-mid w-full rounded-2xl py-1.5 lg:py-3">
+								<h3 className="text-4xl lg:text-5xl xl:text-6xl text-center uppercase font-semibold text-background">
 									High res
 								</h3>
 							</div>
-							<p className="text-center text-3xl">
+							<p className="text-center text-xl lg:text-3xl">
 								Provide high-resolution versions of your artwork for your most
 								dedicated fans!
 							</p>
@@ -160,10 +162,10 @@ export default function Home() {
 						className="col-start-7 col-span-6 row-start-4"
 					>
 						<div className="flex justify-around items-center h-full flex-col gap-5">
-							<h3 className="text-6xl text-center uppercase font-semibold">
+							<h3 className="text-4xl lg:text-5xl xl:text-6xl text-center uppercase font-semibold">
 								Library
 							</h3>
-							<p className="text-center text-3xl">
+							<p className="text-center text-xl lg:text-3xl">
 								Make your artwork easy to browse by using the library/albums
 								feature!
 							</p>
@@ -180,35 +182,44 @@ export default function Home() {
 				title="Get rewarded"
 				description="Unlock your creative potential and reap the rewards! Your creativity could be your ticket to exciting opportunities."
 			>
-				<div className="grid grid-cols-11 grid-rows-3 w-3/4">
-					<div className="w-full h-full flex justify-center items-center col-start-7 col-span-5">
+				<div className="flex flex-col md:grid gap-10 md:gap-0 grid-cols-11 grid-rows-3 w-3/4">
+					<div className="w-full h-full flex flex-col justify-center items-center col-start-7 col-span-5 md:pl-5 lg:p-0">
+						<div className="w-16 h-16 text-gradient1-mid md:hidden mb-4">
+							<CheckIcon />
+						</div>
 						<EarnStep
 							title="Get started"
 							description="Starting is quick and easy. Just fill out some required information in order to setup your store and you're done."
 						/>
 					</div>
-					<div className="w-full h-full flex justify-center items-center col-start-1 col-span-5 row-start-2 row-span-1">
+					<div className="w-full h-full flex flex-col justify-center items-center col-start-1 col-span-5 row-start-2 row-span-1 md:pr-5 lg:p-0">
+						<div className="w-16 h-16 text-gradient2-mid md:hidden mb-4">
+							<PlusIcon />
+						</div>
 						<EarnStep
 							title="Submit your art"
 							description="Tell us more about the art pieces you would like to sell."
 						/>
 					</div>
-					<div className="w-full h-full flex justify-center items-center col-start-7 col-span-5 row-start-3 row-span-1">
+					<div className="w-full h-full flex flex-col justify-center items-center col-start-7 col-span-5 row-start-3 row-span-1 md:pl-5 lg:p-0">
+						<div className="w-16 h-16 text-gradient3-mid md:hidden mb-4">
+							<DollarIcon />
+						</div>
 						<EarnStep
 							title="Start earning"
 							description="You're all set, now just remember to stay active, engage with out community and be patient."
 						/>
 					</div>
-					<div className="flex flex-col justify-center items-center col-start-6 col-span-1 row-start-1 row-span-3">
+					<div className="hidden md:flex flex-col justify-center items-center col-start-6 col-span-1 row-start-1 row-span-3">
 						<div className="w-0.5 h-40 bg-gradient-to-t from-foreground/20"></div>
 						<div className="w-12 h-12 text-gradient1-mid">
 							<CheckIcon />
 						</div>
-						<div className="h-64 border border-foreground/20 border-dashed background "></div>
+						<div className="h-64 border border-foreground/20 border-dashed background"></div>
 						<div className="w-12 h-12 text-gradient2-mid">
 							<PlusIcon />
 						</div>
-						<div className="h-64 border border-foreground/20 border-dashed background "></div>
+						<div className="h-64 border border-foreground/20 border-dashed background"></div>
 						<div className="w-12 h-12 text-gradient3-mid">
 							<DollarIcon />
 						</div>
