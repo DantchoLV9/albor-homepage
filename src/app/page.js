@@ -18,16 +18,21 @@ import EarnStep from "./components/EarnStep/EarnStep";
 import AnyTopic from "./components/FeatureCard/AnyTopic";
 
 export default function Home() {
+	const newsletterFormDisabled =
+		process.env.NEXT_PUBLIC_NEWSLETTER_FORM_DISABLED === "true" ? true : false;
 	return (
 		<main className="w-full flex-1 flex flex-col justify-center items-center">
 			<div className="flex h-screen flex-col justify-center items-center gap-20 lg:gap-40 w-full lg:w-3/4 px-10">
 				<div className="flex flex-col gap-10 w-full">
 					<HeroTitle />
 					<p className="text-center text-2xl sm:text-3xl 2xl:text-4xl">
-						The online canvas where pixels and passions colide.
+						The online canvas where pixels and passions colide.{" "}
+						{newsletterFormDisabled}
 					</p>
 				</div>
-				<NewsletterSignupForm htmlForId="hero_newsletter_signup_form" />
+				{!newsletterFormDisabled && (
+					<NewsletterSignupForm htmlForId="hero_newsletter_signup_form" />
+				)}
 			</div>
 			<GradientBackgroundParagraph
 				className="lg:text-2xl text-center"
@@ -227,9 +232,11 @@ export default function Home() {
 					</div>
 				</div>
 			</Section>
-			<div className="mt-32 mb-24">
-				<NewsletterSignupForm htmlForId="footer_newsletter_signup_form" />
-			</div>
+			{!newsletterFormDisabled && (
+				<div className="mt-32 mb-24">
+					<NewsletterSignupForm htmlForId="footer_newsletter_signup_form" />
+				</div>
+			)}
 		</main>
 	);
 }
