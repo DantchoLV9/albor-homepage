@@ -17,7 +17,7 @@ const Navbar = ({ effect = "blur" }) => {
 	return (
 		<navbar
 			style={style}
-			className={`w-full flex justify-center items-center border-b border-foreground/10 py-3 sticky top-0 z-30 bg-background/80 backdrop-filter backdrop-saturate-200 ${
+			className={`w-full flex justify-center items-center border-b border-foreground/10 py-3 sm:sticky sm:top-0 z-30 bg-background/80 backdrop-filter backdrop-saturate-200 ${
 				effect === "blur" && "backdrop-blur-md"
 			} ${effect === "grain" && "backdrop-blur"}`}
 		>
